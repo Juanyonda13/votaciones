@@ -20,19 +20,18 @@ class LoginController extends Controller
         if(Hash::check($request->password,$user->password))
         {
             $credenciales=[
-                'name'=>$request->name,
                 'email'=>$request->email,
                 'password'=>$request->password
-              
             ];
             //return $perdonProfe;
-           $token=$user->createToken('auth_token')->plainTexToken;
+           $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
                 return $hopa='asas';
+           }else{
+                 return $h='no';
            }
-           Alert::succsess('inicio de sesion correcto');
-           return view('home');
+
         }
         else{
          Alert::succsess('inicio de sesion incorrecto');
@@ -40,6 +39,7 @@ class LoginController extends Controller
         }
     }
     public function logout(){
+
         User()->Tokens()->delete();
     }
 }
