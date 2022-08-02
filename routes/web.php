@@ -24,3 +24,4 @@ Route::post('/userRegister',[RegisterrController::class,'register'])->name('user
 Route::get('/chart',[EstadisticaController::class,'chart']);
 //////login
 Route::get('/verLogin',[LoginController::class,'verLogin']);
+Route::get('/login',[LoginController::class,'login']);
