@@ -21,21 +21,10 @@
 
                             <div class="mb-md-5 mt-md-4 pb-5">
 
-                                <h2 class="fw-bold mb-2 text-uppercase">Registrar Usuario</h2>
-                                <form action="{{ route('userRegister.register') }}" method="POST"
+                                <h2 class="fw-bold mb-2 text-uppercase">Iniciar Sesion</h2>
+                                <form action="" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
-                                    <div class="form-outline form-white mb-4 mt-5">
-                                        <input type="text" id="typeEmailX" class="form-control form-control-lg"
-                                            name="name" />
-                                        <label class="form-label" for="typeEmailX">Nombre</label>
-                                    </div>
-
-                                    <div class="form-outline form-white mb-4">
-                                        <input type="file" class="form-control form-control-lg" name="avatar" />
-                                        <label class="form-label" for="typeEmailX">Avatar</label>
-                                    </div>
-
                                     <div class="form-outline form-white mb-4">
                                         <input type="email" id="typeEmailX" class="form-control form-control-lg"
                                             name="email" />
@@ -46,6 +35,11 @@
                                         <input type="password" id="typePasswordX" class="form-control form-control-lg"
                                             name="password" />
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="password" id="typePasswordX" class="form-control form-control-lg"
+                                            name="password" />
+                                        <label class="form-label" for="typePasswordX">Confirmar Contraseña</label>
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 ">
