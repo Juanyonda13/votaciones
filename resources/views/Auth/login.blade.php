@@ -21,8 +21,8 @@
 
                             <div class="mb-md-5 mt-md-4 pb-5 ">
 
-                                <h2 class="fw-bold mb-2 mt text-uppercase">Iniciar Sesion</h2>
-                                <form action="{{route('userLogin.login')}}" method="POST"
+                                <h2 class="fw-bold mb-2 text-uppercase">Iniciar Sesion</h2>
+                                <form action="{{route('login')}}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-outline form-white mt-5 mb-4">
@@ -36,7 +36,7 @@
                                             name="password" />
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
-                                    
+                                  
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 ">
                                             <button type="submit" name="button"
