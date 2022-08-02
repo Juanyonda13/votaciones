@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/verRegister',[RegisterrController::class,'_invoke']);
 Route::post('/userRegister',[RegisterrController::class,'register'])->name('userRegister.register');
 Route::get('/chart',[EstadisticaController::class,'chart']);
+
