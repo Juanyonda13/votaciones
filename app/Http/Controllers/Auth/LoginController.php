@@ -13,7 +13,13 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
-    public function Login(){
+    public function Login(Request $request){
+        $credenciales=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>$request->password
+          
+        ];
            $user=User::where($request->email);
            if(Hash::check($request->password,$user->password))
            {
