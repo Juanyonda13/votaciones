@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\EstadisticaController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,9 @@ use App\Http\Controllers\EstadisticaController;
 Route::get('/', function () {
     return view('welcome');
 });
+///register
 Route::get('/verRegister',[RegisterrController::class,'_invoke']);
 Route::post('/userRegister',[RegisterrController::class,'register'])->name('userRegister.register');
 Route::get('/chart',[EstadisticaController::class,'chart']);
-
+//////login
+Route::get('/verLogin',[LoginController::class,'verLogin']);
