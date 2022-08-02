@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{'css/estilo.css'}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
@@ -22,7 +22,7 @@
                             <div class="mb-md-5 mt-md-4 pb-5 ">
 
                                 <h2 class="fw-bold mb-2 mt text-uppercase">Iniciar Sesion</h2>
-                                <form action="" method="POST"
+                                <form action="{{route('userLogin.login')}}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-outline form-white mt-5 mb-4">
@@ -36,11 +36,7 @@
                                             name="password" />
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
-                                    <div class="form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                                            name="password" />
-                                        <label class="form-label" for="typePasswordX">Confirmar Contraseña</label>
-                                    </div>
+                                    
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 ">
                                             <button type="submit" name="button"

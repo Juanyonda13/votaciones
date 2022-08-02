@@ -12,6 +12,7 @@
 </head>
 
 <body class="fondo">
+  @include('sweetalert::alert')
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -27,31 +28,27 @@
                                     @csrf
                                     <div class="form-outline form-white mb-4 mt-5">
                                         <input type="text" id="typeEmailX" class="form-control form-control-lg"
-                                            name="name"required />
+                                            name="name" />
                                         <label class="form-label" for="typeEmailX">Nombre</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
-                                        <input type="file" class="form-control form-control-lg" name="avatar" required/>
+                                        <input type="file" class="form-control form-control-lg" name="avatar" />
                                         <label class="form-label" for="typeEmailX">Avatar</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
                                         <input type="email" id="typeEmailX" class="form-control form-control-lg"
-                                            name="email" required/>
+                                            name="email" />
                                         <label class="form-label" for="typeEmailX">Correo</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
                                         <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                                            name="password"  required/>
+                                            name="password"  />
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
-                                    <div class="form-outline form-white mb-4">
-                                      <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                                          name="confirmation_password"  required/>
-                                      <label class="form-label" for="typePasswordX">Confirmar Contraseña</label>
-                                  </div>
+                                    
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 mt-2 mb-4">
                                             <button type="submit" name="button"

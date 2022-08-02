@@ -16,28 +16,21 @@ class LoginController extends Controller
         return view('Auth.login');
     }
     public function Login(Request $request){
-        $user=User::where('email','=',$request->email)->first();
-        if(Hash::check($request->password,$user->password))
-        {
-            $credenciales=[
-                'name'=>$request->name,
-                'email'=>$request->email,
-                'password'=>$request->password
-              
-            ];
-            //return $perdonProfe;
-           $token=$user->createToken('auth_token')->plainTexToken;
-           if(Auth::attempt($credenciales)){
-                //    return redirect()->route();
-                return $hopa='asas';
-           }
-           Alert::succsess('inicio de sesion correcto');
-           return view('home');
+        
+        $user = User::where("email", "=", $request->email)->first();
+
+        $data = [
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ];
+        if (isset($user->id)) {
+            if (Hash::check($request->password, $user->password)) {
+                $token = $user->createToken("auth_token")->plainTextToken;
+                if(Auth::attempt(['email']))
+                return $xd = 'esta god';
+            }
         }
-        else{
-         Alert::succsess('inicio de sesion incorrecto');
-         return redirect()->route('login.index');
-        }
+
     }
     public function logout(){
         User()->Tokens()->delete();

@@ -24,7 +24,7 @@ class RegisterrController extends Controller
              'name'=>'required',
              'avatar'=>'required',
              'email'=>'required',
-             'password'=>'required|confirmed'
+             'password'=>'required'
         ]);
         if(!$validation->fails()){
             $user= new User();
