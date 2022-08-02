@@ -47,6 +47,11 @@
                                             name="password"  required/>
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
+                                    <div class="form-outline form-white mb-4">
+                                      <input type="password" id="typePasswordX" class="form-control form-control-lg"
+                                          name="confirmation_password"  required/>
+                                      <label class="form-label" for="typePasswordX">Confirmar Contraseña</label>
+                                  </div>
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 mt-2 mb-4">
                                             <button type="submit" name="button"
