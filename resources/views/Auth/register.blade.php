@@ -59,6 +59,10 @@
                                                 class="btn btn1  w-100">Registrar</button>
                                         </div>
                                     </div>
+
+                                    <div class="form-outline  form-white mb-4">
+                                        <a class="ini" id="inicia" href="{{route('verLogin')}}">Ya tienes cuenta? Inicia Sesion!</a>
+                                    </div>
                                 </form>
                             </div>
 
@@ -86,6 +90,9 @@
         background-color: #DC5716;
         color: #FFFF
     }
+    .btn1:hover {
+        color: #FFFF
+    }
 
 
     .fondo {
@@ -93,6 +100,18 @@
     }
     #viewPassword {
         cursor: pointer;
+    }
+
+    #inicia{
+        cursor: pointer;
+    }
+
+    .ini{
+        text-decoration: none;
+        color: #FFFF
+    }
+    .ini:hover{
+        color: #DC5716;
     }
 
 

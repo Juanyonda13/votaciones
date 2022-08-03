@@ -47,6 +47,9 @@
                                                 class="btn btn1 btn-card w-100">Iniciar Sesion</button>
                                         </div>
                                     </div>
+                                    <div class="form-outline  form-white mb-4 mt-5">
+                                        <a class="ini" id="inicia" href="{{route('verRegister')}}">No tienes cuenta? Registrate!</a>
+                                    </div>
                                 </form>
                             </div>
 
@@ -74,11 +77,25 @@
         background-color: #DC5716;
         color: #FFFF
     }
+    .btn1:hover {
+        color: #FFFF;
+    }
 
     #viewPassword {
         cursor: pointer;
     }
 
+    #inicia{
+        cursor: pointer;
+    }
+
+    .ini{
+        text-decoration: none;
+        color: #FFFF
+    }
+    .ini:hover{
+        color: #DC5716;
+    }
 
     .fondo {
         background-image: url('https://fondosmil.com/fondo/54336.png')

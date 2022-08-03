@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 ///register
-Route::get('/verRegister',[RegisterrController::class,'_invoke']);
+Route::get('/verRegister',[RegisterrController::class,'_invoke'])->name('verRegister');
 Route::post('/userRegister',[RegisterrController::class,'register'])->name('userRegister.register');
-
+Route::get('/chart',[EstadisticaController::class,'chart'])->middleware('auth')->name('chart.estadistica');
 //////login
 Route::get('/verLogin',[LoginController::class,'verLogin'])->name('verLogin');
 Route::post('/login',[LoginController::class,'login'])->name('login');
