@@ -24,7 +24,7 @@
                     <select id="my-select" class="form-control" name="">
                       <option selected>juan camilo yonda</option>
                       <option value=""><a href="detail_perfil.html">Ajustes</a></option>
-                      <option value="">salir</option>
+                      <option value="" >salir</option>
                     </select>
                   </div>
              </div>
@@ -42,6 +42,7 @@
                     <a class="nav-link d-flex justify-content-center">calendario</a>
                     <a class="nav-link d-flex justify-content-center">histotial medico</a>
                     <a class="nav-link d-flex justify-content-center">Ajustes</a>
+                    <a href="{{route('cerrarSesion')}}">Cerrar Sesion</a>
                  </nav>
            </section>
            <section class="col-10 d-flex border">
