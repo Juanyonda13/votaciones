@@ -21,7 +21,7 @@ Route::get('/', function () {
 ///register
 Route::get('/verRegister',[RegisterrController::class,'_invoke']);
 Route::post('/userRegister',[RegisterrController::class,'register'])->name('userRegister.register');
-Route::get('/chart',[EstadisticaController::class,'chart']);
+Route::get('/chart',[EstadisticaController::class,'chart'])->name('chart.estadistica');
 //////login
 Route::get('/verLogin',[LoginController::class,'verLogin']);
 Route::post('/login',[LoginController::class,'login'])->name('login');

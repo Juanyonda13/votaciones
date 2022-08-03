@@ -24,7 +24,7 @@ class RegisterrController extends Controller
              'name'=>'required',
              'avatar'=>'required',
              'email'=>'required',
-             'password'=>'required|confirmed'
+             'password'=>'required'
         ]);
         if(!$validation->fails()){
             $user= new User();
@@ -37,7 +37,7 @@ class RegisterrController extends Controller
                 $user->password=Hash::make($request->password);
                 $user->save();
                 Alert::success('usuarios Registrado');
-                return $h='hola1';
+                return redirect('');
             }else{
                 Alert::success('algo a malido sal');
                 return $h='hola2';   
