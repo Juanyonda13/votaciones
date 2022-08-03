@@ -26,6 +26,7 @@ class LoginController extends Controller
            $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
+                
                  return redirect()->route('chart.estadistica', compact('user'));
            }else{
                  return $h='no';
@@ -38,7 +39,6 @@ class LoginController extends Controller
 
     }
     public function logout(){
-
         User()->Tokens()->delete();
     }
 }
