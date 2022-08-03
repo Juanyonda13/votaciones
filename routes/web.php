@@ -25,3 +25,5 @@ Route::get('/chart',[EstadisticaController::class,'chart'])->name('chart.estadis
 //////login
 Route::get('/verLogin',[LoginController::class,'verLogin']);
 Route::post('/login',[LoginController::class,'login'])->name('login');
+
+
