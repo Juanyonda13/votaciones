@@ -12,7 +12,7 @@
 </head>
 
 <body class="fondo">
-  @include('sweetalert::alert')
+    @include('sweetalert::alert')
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -28,26 +28,27 @@
                                     @csrf
                                     <div class="form-outline form-white mb-4 mt-5">
                                         <input type="text" id="typeEmailX" class="form-control form-control-lg"
-                                            name="name" />
+                                            name="name" required />
                                         <label class="form-label" for="typeEmailX">Nombre</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
-                                        <input type="file" class="form-control form-control-lg" name="avatar" />
+                                        <input type="file" class="form-control form-control-lg" name="avatar" required/>
                                         <label class="form-label" for="typeEmailX">Avatar</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
                                         <input type="email" id="typeEmailX" class="form-control form-control-lg"
-                                            name="email" />
+                                            name="email" required />
                                         <label class="form-label" for="typeEmailX">Correo</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
                                         <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                                            name="password"  />
+                                            name="password" required/>
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
+
                                     
                                     <div class="row justify-content-center">
                                         <div class="col-sm-8 mt-2 mb-4">
@@ -84,11 +85,9 @@
     }
 
 
-    .fondo{
-      background-image: url('https://fondosmil.com/fondo/54336.png')
+    .fondo {
+        background-image: url('https://fondosmil.com/fondo/54336.png')
     }
-
-
 </style>
 
 </html>

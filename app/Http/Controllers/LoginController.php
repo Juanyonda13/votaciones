@@ -27,7 +27,7 @@ class LoginController extends Controller
            $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
-                return $hopa='asas';
+                 return redirect()->route('chart.estadistica', compact('user'));
            }else{
                  return $h='no';
            }

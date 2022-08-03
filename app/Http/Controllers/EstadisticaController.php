@@ -16,4 +16,13 @@ class EstadisticaController extends Controller
         $data ['data']= json_encode($data);
         return view('estadisticas',$data);
     }
+
+
+    public function index(){
+        return view('estadisticas');
+    }
+
+
+
+
 }
