@@ -27,7 +27,7 @@ class LoginController extends Controller
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
                 Alert::success('inicio de sesion correcto');
-                 return redirect()->route('chart.estadistica', compact('user'));
+                 return redirect()->route('home', compact('user'));
            }else{
 
                  return  redirect()->route('verLogin');

@@ -29,7 +29,8 @@ Route::get('/verLogin',[LoginController::class,'verLogin'])->name('verLogin');
 Route::post('/login',[LoginController::class,'login'])->name('login');
 Route::get('/cerrarSesion',[LoginController::class,'logout'])->name('cerrarSesion');
 
-
+//home
+Route::get('/home',[EstadisticaController::class,'index'])->name('home');
 
 
 //dashboard
