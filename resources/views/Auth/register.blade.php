@@ -48,6 +48,9 @@
                                             name="password" required/>
                                         <label class="form-label" for="typePasswordX">Contraseña</label>
                                     </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <a id="viewPassword">Mostrar contraseña</a>
+                                    </div>
 
                                     
                                     <div class="row justify-content-center">
@@ -88,6 +91,29 @@
     .fondo {
         background-image: url('https://fondosmil.com/fondo/54336.png')
     }
+    #viewPassword {
+        cursor: pointer;
+    }
+
+
+    .fondo {
+        background-image: url('https://fondosmil.com/fondo/54336.png')
+    }
 </style>
 
+<script>
+    let password = document.getElementById('typePasswordX');
+    let viewPassword = document.getElementById('viewPassword');
+    let click = false;
+
+    viewPassword.addEventListener('click', (e) => {
+        if (!click) {
+            password.type = 'text'
+            click = true
+        } else if (click) {
+            password.type = 'password'
+            click = false
+        }
+    })
+</script>
 </html>
