@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EstadisticaController extends Controller
 {
@@ -19,7 +20,13 @@ class EstadisticaController extends Controller
 
 
     public function index(){
-        return view('estadisticas');
+       if(Auth::user()){
+        return view('home');
+       } 
+       else{
+        return redirect()->route('verLogin');
+       }
+        
     }
 
 
