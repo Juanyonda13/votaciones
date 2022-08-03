@@ -23,15 +23,13 @@ class LoginController extends Controller
                 'email'=>$request->email,
                 'password'=>$request->password
             ];
-            //return $perdonProfe;
            $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
-                //    return redirect()->route();
+
                 return $hopa='asas';
            }else{
                  return $h='no';
            }
-
         }
         else{
          Alert::succsess('inicio de sesion incorrecto');
