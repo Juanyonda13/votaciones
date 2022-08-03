@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\EstadisticaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +27,5 @@ Route::get('/chart',[EstadisticaController::class,'chart'])->name('chart.estadis
 Route::get('/verLogin',[LoginController::class,'verLogin']);
 Route::post('/login',[LoginController::class,'login'])->name('login');
 
-
+//dashboard
+Route::get('/verDahboard',[DashboardController::class,'verDashboard']);

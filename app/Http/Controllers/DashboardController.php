@@ -15,8 +15,7 @@ class DashboardController extends Controller
     public function verDashboard()
     {
         $img=User::where('avatar','=',Auth()->user()->avatar);
-        
-        return view('layouts.dashboard',compact('img'));
-
+        $name=User::where('name','=',Auth()->user()->name);  
+        return view('layouts.dashboard',compact('img','name'));
     }
 }
