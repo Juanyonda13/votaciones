@@ -35,8 +35,8 @@
            <section class="col-2 d-flex  border flex-column" style="height: 100vh;">
                  <div class="w-100 d-flex p-5  justify-content-center">
                     <h1 class="font-1 active">S</h1>
-                    <h2>Bienvenido . {{auth()->user()->name}} </h2>
-                    <img src="{{asset("storage/".auth()->user()->avatar)}}"/>
+                    <h2>Bienvenido . {{$name}} </h2>
+                    <img src="{{asset("/".$img)}}"/>
                  </div>
                  <nav class="d-flex flex-column nav w-100 p-4 h-50 justify-content-between">
                     <a class=" nav-link d-flex justify-content-center">Home</a>

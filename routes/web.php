@@ -34,4 +34,4 @@ Route::get('/home',[EstadisticaController::class,'index'])->name('home');
 
 
 //dashboard
-Route::get('/verDahboard',[DashboardController::class,'verDashboard']);
+Route::get('/verDahboard',[DashboardController::class,'verDashboard'])->name('verDahboard');

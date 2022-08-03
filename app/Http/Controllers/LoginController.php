@@ -26,8 +26,9 @@ class LoginController extends Controller
            $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
+
                 Alert::success('inicio de sesion correcto');
-                 return redirect()->route('home', compact('user'));
+                return redirect()->route('verDahboard', compact('user'));
            }else{
 
                  return  redirect()->route('verLogin');
@@ -42,7 +43,7 @@ class LoginController extends Controller
     public function logout(){
 
         Auth::logout();
-
+        
         return redirect()->route('verLogin');
     }
 }
