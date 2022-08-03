@@ -15,11 +15,18 @@ class DashboardController extends Controller
     //
     public function verDashboard()
     { 
-         $user=Auth()->user();
+        if(Auth::user()){
+            $user=Auth()->user();
+            return view('layouts.dashboard',compact('user'));
+           } 
+           else{
+            return redirect()->route('verLogin');
+           }
+        
 
         // return $img;
     
-         return view('layouts.dashboard',compact('user'));
+ 
     }
 }
 ?>

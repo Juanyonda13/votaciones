@@ -31,13 +31,13 @@ class RegisterrController extends Controller
             $user->name=$request->name;
 
             if($request->hasFile('avatar')){
-                $avatar=$request->file('avatar')->store('public');
+                $avatar=$request->file('avatar')->store('storage/avatar');
                 $user->avatar=$avatar;
                 $user->email=$request->email;
                 $user->password=Hash::make($request->password);
                 $user->save();
                 Alert::success('usuarios Registrado');
-                return redirect('');
+                return redirect()->route('verLogin');
             }else{
                 Alert::success('algo a malido sal');
                 return $h='hola2';   
