@@ -31,7 +31,7 @@ class RegisterrController extends Controller
             $user->name=$request->name;
 
             if($request->hasFile('avatar')){
-                $avatar=$request->file('avatar')->store('storage/avatar');
+                $avatar=$request->file('avatar')->store('public');
                 $user->avatar=$avatar;
                 $user->email=$request->email;
                 $user->password=Hash::make($request->password);

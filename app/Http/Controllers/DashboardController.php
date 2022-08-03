@@ -15,7 +15,7 @@ class DashboardController extends Controller
     //
     public function verDashboard()
     { 
-        if(Auth::user()){
+        if(Auth:: user()){
             $user=Auth()->user();
             return view('layouts.dashboard',compact('user'));
            } 
