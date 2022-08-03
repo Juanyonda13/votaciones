@@ -28,7 +28,7 @@ class LoginController extends Controller
                 //    return redirect()->route();
                  return redirect()->route('chart.estadistica', compact('user'));
            }else{
-                 return $h='no';
+                 return  redirect()->route('verLogin');
            }
         }
         else{
@@ -39,6 +39,8 @@ class LoginController extends Controller
     }
     public function logout(){
 
-        User()->Tokens()->delete();
+        Auth::logout();
+
+        return redirect()->route('verLogin');
     }
 }

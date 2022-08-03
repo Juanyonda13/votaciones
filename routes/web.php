@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterrController;
 use App\Http\Controllers\EstadisticaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,10 +23,14 @@ Route::get('/', function () {
 ///register
 Route::get('/verRegister',[RegisterrController::class,'_invoke']);
 Route::post('/userRegister',[RegisterrController::class,'register'])->name('userRegister.register');
-Route::get('/chart',[EstadisticaController::class,'chart'])->name('chart.estadistica');
+Route::get('/chart',[EstadisticaController::class,'chart'])->middleware('auth')->name('chart.estadistica');
 //////login
-Route::get('/verLogin',[LoginController::class,'verLogin']);
+Route::get('/verLogin',[LoginController::class,'verLogin'])->name('verLogin');
 Route::post('/login',[LoginController::class,'login'])->name('login');
+Route::get('/cerrarSesion',[LoginController::class,'logout'])->name('cerrarSesion');
+
+
+
 
 //dashboard
-Route::get('/verDahboard',[DashboardController::class,'verDashboard']);
+Route::get('/verDahboard',[DashboardController::class,'verDashboard'])->middleware('auth');
