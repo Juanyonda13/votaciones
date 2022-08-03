@@ -14,10 +14,12 @@ class DashboardController extends Controller
 {
     //
     public function verDashboard()
-    {
-        $img=Auth()->user()->avatar;
-        $name=Auth()->user()->name; 
+    { 
+         $user=Auth()->user();
+
         // return $img;
-        return view('layouts.dashboard',compact('img','name'));
+    
+         return view('layouts.dashboard',compact('user'));
     }
 }
+?>

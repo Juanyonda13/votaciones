@@ -25,9 +25,9 @@
            <section class="col-2 d-flex  flex-column" style="height: 100vh;">
                  <div class="w-100 d-flex p-5  justify-content-center">
 
-                    <h5 class="font-1 active d-flex justify-content-center t">{{auth()->user()->name}} </h5>
+                    <h5 class="font-1 active d-flex justify-content-center t">{{$user->name}} </h5>
 
-                    {{-- <img src="{{asset("storage/".auth()->user()->avatar)}}"/> --}}
+                    <img src="{{url('http://127.0.0.1:8000/storage/app/public/zAAa5YcFt0ukPf7CxDnBu0Zpt0BuYLb61Vxy6tVe.png')}}"/> 
                  </div>
                  <nav class="d-flex flex-wrap flex-column nav w-100 p-4 mt-5 h-50 justify-content-between">
                     <a class="nav-link d-flex justify-content-center t" href="#">Home</a>
