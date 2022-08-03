@@ -31,6 +31,7 @@
         </div>
     </header>
     <section class="body container-fliud d-flex col-12">
+        @include('sweetalert::alert')
            <section class="col-2 d-flex  border flex-column" style="height: 100vh;">
                  <div class="w-100 d-flex p-5  justify-content-center">
                     <h1 class="font-1 active">S</h1>

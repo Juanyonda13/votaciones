@@ -26,15 +26,16 @@ class LoginController extends Controller
            $token=$user->createToken('auth_token')->plainTextToken;
            if(Auth::attempt($credenciales)){
                 //    return redirect()->route();
-                
+                Alert::success('inicio de sesion correcto');
                  return redirect()->route('chart.estadistica', compact('user'));
            }else{
+
                  return  redirect()->route('verLogin');
            }
         }
         else{
-         Alert::succsess('inicio de sesion incorrecto');
-         return redirect()->route('login.index');
+         Alert::error('inicio de sesion incorrecto');
+         return redirect()->route('verLogin');
         }
 
     }
