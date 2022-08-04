@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('verLogin');
 });
 ///register
 Route::get('/verRegister',[RegisterrController::class,'_invoke'])->name('verRegister');

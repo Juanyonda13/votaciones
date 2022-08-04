@@ -9,6 +9,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\User;
 class RegisterrController extends Controller
@@ -31,8 +32,9 @@ class RegisterrController extends Controller
             $user->name=$request->name;
 
             if($request->hasFile('avatar')){
-                $avatar=$request->file('avatar')->store('public');
-                $user->avatar=$avatar;
+                $avatar=$request->file('avatar')->store('public/avatars');
+                $url = Storage::url($avatar);
+                $user->avatar=$url;
                 $user->email=$request->email;
                 $user->password=Hash::make($request->password);
                 $user->save();
