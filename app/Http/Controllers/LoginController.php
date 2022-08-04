@@ -47,7 +47,7 @@ class LoginController extends Controller
     public function logout(){
 
         Auth::logout();
-        
+        Alert::warning('cierre de session');
         return redirect()->route('verLogin');
     }
 }

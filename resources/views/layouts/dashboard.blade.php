@@ -27,7 +27,7 @@
 
                     <h5 class="font-1 active d-flex justify-content-center t">{{$user->name}} </h5>
 
-                    <img src="{{asset("storage/".Auth()->user()->avatar)}}"/> 
+                    <img src="{{asset($user->avatar)}}"/> 
                  </div>
                  <nav class="d-flex flex-wrap flex-column nav w-100 p-4 mt-5 h-50 justify-content-between">
                     <a class="nav-link d-flex justify-content-center t" href="#">Home</a>
